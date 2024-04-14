@@ -1,0 +1,404 @@
+/* Importing external fonts and stylesheets */
+@import url(https://fonts.gstatic.com);
+@import url(https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+h1,h2,h3,h4 {
+  font-family: 'Tinos', serif;
+ font-weight: 550;
+
+}
+p{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+}
+
+/* Styling for scrollbar */
+html::-webkit-scrollbar{
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+  background: #000000;
+  border-radius: 5rem;
+}
+
+/* Styling for sections */
+section{
+  padding: 50px 100px;
+}
+
+/* Styling for the header */
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right:0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fbfbfb;
+  padding: 15px 100px;
+}
+
+/* Styling for the logo */
+.logo {
+  font-size: 32px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Styling for navigation links */
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+/* Styling for navigation link hover effect */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(0, 0, 0);
+  transition: .3s;
+}
+
+/* Styling for navigation link hover effect animation */
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/* Styling for menu icon */
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+.main{
+    margin-top: 4em;
+}
+
+.heading-2{
+  display: flex;
+  justify-content: center;
+  font-size: 200%;
+}
+.form{
+  display: flex;
+  
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  padding-left: 2%;
+}
+
+
+.maps iframe{
+  display: flex;
+  height: 90%;
+  width: 90%;
+ 
+}
+
+
+.input{
+  max-width: 20%;
+}
+
+.box{
+  height: 5em;
+}
+
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 35%;
+}
+
+.video h2{
+  padding-left: 12%;
+}
+
+.Picture_Links{
+  color: rgb(0, 0, 0);
+  font-size: 150%;
+}
+/*Footer*/
+.footer {
+  width: 100%;
+  background: #000000;
+
+  font-family: 'Play', sans-serif;
+  text-align: center;
+}
+
+/*Table css*/
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+.styled-table th {
+  background-color: #000;
+  color: #fff;
+  text-align: left;
+}
+
+/* Styling for footer row */
+.footer .row {
+
+  width: 100%;
+ 
+  padding: 0.6% 0%;
+  color: rgb(255, 255, 255);
+  font-size: 0.8em;
+}
+
+/* Styling for footer row links */
+.footer .row a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  
+}
+
+/* Styling for footer row links hover effect */
+.footer .row a:hover {
+  color: #e52727;
+}
+
+/* Styling for footer row ul */
+.footer .row ul {
+  width: 100%;
+}
+
+/* Styling for footer row ul li */
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+/* Styling for footer row links icon */
+.footer .row a i {
+  font-size: 2em;
+  margin:1%;
+}
+
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+
+
+@media (max-width: 720px){
+  .footer{
+      text-align:left;
+      max-width: 100%;
+  }
+  .footer .row ul li{
+      display:block;
+      margin:10px 0px;
+      text-align:left;
+  }
+  .footer .row a i{
+      margin:0% 3%;
+  }
+
+  video{
+    max-width: 95%;
+  }
+
+  .video{
+    padding: 0%;
+    padding-left: 10%;
+  }
+
+  .maps{
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .maps iframe{
+    padding-left: 10%;
+    max-height: 60%;
+  }
+
+  .form{
+    max-width: 90%;
+    
+  }
+}
+
+@media (max-width: 991px){
+  header{
+      padding: 18px 40px;
+  }
+  section{
+      padding: 50px 40px;
+  }
+}
+
+@media (max-width: 881px){
+  .home{
+      background-position: left;
+  }
+  .form-container form{
+      bottom: 0.2rem;
+      left: 40px;
+  }
+}
+
+@media (max-width: 768px){
+  header{
+      padding: 11px 40px;
+  }
+  #menu-icon{
+      display: initial;
+  }
+  .text h1 {
+      font-size: 2.5rem;
+  }
+  .home{
+      grid-template-columns: 1fr;
+  }
+  .form-container form{
+      position: unset;
+  }
+  header .navbar{
+      position: absolute;
+      top: -500px;
+      left:0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      box-shadow: 0 4px 4px rgb(0, 0, 0);
+      transition: 0.2s ease;
+      text-align: left;
+  }
+  .navbar.active{
+      top: 100%;
+  }
+  .navbar a{
+      padding: 1rem;
+      border-left: 2px solid rgb(0, 0, 0);
+      margin: 1rem;
+      display: block;
+  }
+  .navbar a:hover{
+      color: #ff0000;
+      background: rgb(0, 0, 0);
+      border: none;
+  }
+  .navbar a::after{
+      display: none;
+  }
+  .heading span{
+      font-size: 0.9rem;
+      font-weight: 600;
+  }
+  .heading h1{
+      font-size: 1.3rem;
+  }
+  .about-container{
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+  .about-img{
+      padding: 1rem;
+      order: 2;
+  }
+}
+
+@media (max-width: 568px){
+  .form-container{
+      padding-top: 2rem;
+  }
+}
+
+@media (max-width: 350px){
+  header{
+      padding: 6px 14px;
+  }
+  .logo{
+      width: 30px;
+  }
+  section{
+      padding: 50px 14px;
+  }
+  .text h1{
+      font-size: 2rem;
+  }
+  .vehicle-container{
+      grid-template-columns: repeat(auto-fit, minmax(254px,auto));
+  }
+}
